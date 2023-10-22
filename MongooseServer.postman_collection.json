@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "485287a2-59ae-4a94-8fd4-3a4919dbdaa9",
+		"name": "MongooseServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18472796"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "CrearProducto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"gelatina\",\r\n    \"precio\": 19.00,\r\n    \"cantidad\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/productos",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarProducto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Galletassssss\",\r\n    \"precio\": 20.00,\r\n    \"cantidad\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/productos/6530cc4fd48b44e23e348e78",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"productos",
+								"6530cc4fd48b44e23e348e78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerProducto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL_API}}api/productos/6530cc4fd48b44e23e348e78",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"productos",
+								"6530cc4fd48b44e23e348e78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerProductos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}api/productos",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProducto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}api/productos/6530cc4fd48b44e23e348e78",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"productos",
+								"6530cc4fd48b44e23e348e78"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ventas",
+			"item": [
+				{
+					"name": "CrearVenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"total\": 100.50,\r\n  \"iva\": 20.10,\r\n  \"productoventa\": [\r\n    {\r\n      \"idproducto\": \"6530cc3ad48b44e23e348e72\",\r\n      \"cantidadVendida\": 3,\r\n      \"subtotal\": 45.25,\r\n      \"precioVenta\": 15.08\r\n    },\r\n    {\r\n      \"idproducto\": \"6530cc44d48b44e23e348e74\",\r\n      \"cantidadVendida\": 2,\r\n      \"subtotal\": 30.40,\r\n      \"precioVenta\": 15.20\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/ventas",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"ventas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerVenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/ventas/6530cfe8fadedeef6aeb0e3d",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"ventas",
+								"6530cfe8fadedeef6aeb0e3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerVentas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/ventas",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"ventas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarVenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"total\": 500.50,\r\n  \"iva\": 20.10,\r\n  \"productoventa\": [\r\n    {\r\n      \"idproducto\": \"6530cc3ad48b44e23e348e72\",\r\n      \"cantidadVendida\": 4,\r\n      \"subtotal\": 45.25,\r\n      \"precioVenta\": 15.08\r\n    },\r\n    {\r\n      \"idproducto\": \"6530cc44d48b44e23e348e74\",\r\n      \"cantidadVendida\": 4,\r\n      \"subtotal\": 30.40,\r\n      \"precioVenta\": 15.20\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/ventas/6530cfe8fadedeef6aeb0e3d",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"ventas",
+								"6530cfe8fadedeef6aeb0e3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarVenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"total\": 100.50,\r\n  \"iva\": 20.10,\r\n  \"productoventa\": [\r\n    {\r\n      \"idproducto\": \"6530cc3ad48b44e23e348e72\",\r\n      \"cantidadVendida\": 3,\r\n      \"subtotal\": 45.25,\r\n      \"precioVenta\": 15.08\r\n    },\r\n    {\r\n      \"idproducto\": \"6530cc44d48b44e23e348e74\",\r\n      \"cantidadVendida\": 2,\r\n      \"subtotal\": 30.40,\r\n      \"precioVenta\": 15.20\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/ventas/6530cfe8fadedeef6aeb0e3d",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"ventas",
+								"6530cfe8fadedeef6aeb0e3d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerDesgloseVenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"total\": 100.50,\r\n  \"iva\": 20.10,\r\n  \"productoventa\": [\r\n    {\r\n      \"idproducto\": \"6530cc3ad48b44e23e348e72\",\r\n      \"cantidadVendida\": 3,\r\n      \"subtotal\": 45.25,\r\n      \"precioVenta\": 15.08\r\n    },\r\n    {\r\n      \"idproducto\": \"6530cc44d48b44e23e348e74\",\r\n      \"cantidadVendida\": 2,\r\n      \"subtotal\": 30.40,\r\n      \"precioVenta\": 15.20\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}api/ventas/6530d2a578dc725ffb56e993/desglose",
+							"host": [
+								"{{URL_API}}api"
+							],
+							"path": [
+								"ventas",
+								"6530d2a578dc725ffb56e993",
+								"desglose"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_API",
+			"value": "http://localhost:3000/"
+		}
+	]
+}
